@@ -1,2 +1,3 @@
-# Iceberg_Glue_register_table-
-Work in Progress -
+# Iceberg Glue - register_table
+
+Iceberg introduced the ```register_table``` functionality which allows you to 
