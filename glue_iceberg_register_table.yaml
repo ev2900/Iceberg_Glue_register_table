@@ -5,6 +5,9 @@ Resources:
   #
   S3Bucket:
     Type: AWS::S3::Bucket
+  
+  S3BucketRegister:
+    Type: AWS::S3::Bucket
 
   #
   # Lambda Function IAM Role
