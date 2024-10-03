@@ -159,6 +159,13 @@ Resources:
       DatabaseInput:
         Name: 'iceberg'
 
+  GlueDatabase_register:
+    Type: 'AWS::Glue::Database'
+    Properties:
+      CatalogId: !Ref 'AWS::AccountId'
+      DatabaseInput:
+        Name: 'iceberg_register'
+
   #
   # Glue Execution IAM Role
   # 
