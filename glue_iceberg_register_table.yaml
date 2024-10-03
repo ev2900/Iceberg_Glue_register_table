@@ -3,10 +3,10 @@ Resources:
   #
   # S3 Bucket
   #
-  S3Bucket:
+  S3:
     Type: AWS::S3::Bucket
   
-  S3BucketRegister:
+  S3RegisterTable:
     Type: AWS::S3::Bucket
 
   #
