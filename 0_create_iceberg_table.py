@@ -42,14 +42,14 @@ inputDf = spark.createDataFrame(data=data,schema=schema)
 # Write sample data to S3 as Iceberg
 inputDf.createOrReplaceTempView("tmp_inputDf")
 
-query = f"""
+query_1 = f"""
 CREATE TABLE glue_catalog.iceberg.sampledataicebergtable
 USING iceberg
 TBLPROPERTIES ("format-version"="2")
 AS SELECT * FROM tmp_inputDf
 """
 
-spark.sql(query)
+spark.sql(query_1)
 
 # Read sample data 
 query = f"""SELECT * FROM glue_catalog.iceberg.sampledataicebergtable"""
@@ -81,7 +81,7 @@ mergeDF = spark.createDataFrame(data=data,schema=schema)
 
 mergeDF.createOrReplaceTempView("mergeTable")
 
-query = f"""MERGE INTO 
+query_2 = f"""MERGE INTO 
         glue_catalog.iceberg.sampledataicebergtable t 
     USING 
         (SELECT * FROM mergeTable) s 
@@ -91,4 +91,4 @@ query = f"""MERGE INTO
     WHEN MATCHED AND s.change_type = 'delete' THEN DELETE
 """
 
-#spark.sql(query)
+spark.sql(query_2)
