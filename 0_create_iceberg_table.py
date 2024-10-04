@@ -91,4 +91,4 @@ query_2 = f"""MERGE INTO
     WHEN MATCHED AND s.change_type = 'delete' THEN DELETE
 """
 
-spark.sql(query_2)
+#spark.sql(query_2)
