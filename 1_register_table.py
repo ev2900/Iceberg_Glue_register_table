@@ -23,7 +23,7 @@ spark = SparkSession.builder \
 query = f"""
 CALL glue_catalog.system.register_table(
   table => 'icebergregister.registersampledataicebergtable',
-  metadata_file => 's3://<bucket-name>/metadata/<most-recent-snapshot-file>.metadata.json'
+  metadata_file => 's3://<bucket-name>/iceberg/iceberg.db/sampledataicebergtable/<most-recent-snapshot-file>.metadata.json'
 """
 
 spark.sql(query)
