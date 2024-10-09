@@ -6,9 +6,6 @@ Resources:
   S3:
     Type: AWS::S3::Bucket
   
-  S3RegisterTable:
-    Type: AWS::S3::Bucket
-
   #
   # Lambda Function IAM Role
   # 
