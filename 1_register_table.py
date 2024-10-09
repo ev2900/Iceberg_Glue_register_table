@@ -19,3 +19,11 @@ spark = SparkSession.builder \
     .config("spark.sql.catalog.glue_catalog.catalog-impl", "org.apache.iceberg.aws.glue.GlueCatalog") \
     .config("spark.sql.catalog.glue_catalog.io-impl", "org.apache.iceberg.aws.s3.S3FileIO") \
     .getOrCreate()
+
+query = f"""
+CALL glue_catalog.system.register_table(
+  table => 'b.b',
+  metadata_file => 's3://b/metadata/Snapshot A.metadata.json'
+"""
+
+spark.sql(query)
