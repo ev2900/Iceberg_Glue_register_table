@@ -1,6 +1,6 @@
 # Iceberg Glue - register_table
 
-<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-23-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-116-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-012-green">
+<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-37-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-116-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-012-green">
 
 The Apache Iceberg ```register_table``` can be used to register Iceberg metadata file to a new data catalog table. This functionality is especially useful in data catalog migrations.
 
@@ -28,7 +28,7 @@ Open the [Glue Console](https://us-east-1.console.aws.amazon.com/gluestudio/home
 
 <img width="700" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/run_glue_job_1.PNG">
 
-This will create a table in Glue Data Catalog named *iceberg* 
+This will create a table in Glue Data Catalog named *iceberg*
 
 <img width="700" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/glue_table_1.PNG">
 
@@ -38,7 +38,7 @@ Open the [Glue Console](https://us-east-1.console.aws.amazon.com/gluestudio/home
 
 <img width="700" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/edit_job_1.png">
 
-In the Glue script we need to edit the query 
+In the Glue script we need to edit the query
 
 ```
 CALL glue_catalog.system.register_table(
