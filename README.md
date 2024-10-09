@@ -48,3 +48,5 @@ Specifically you need to replace the ```<bucket-name>``` and ```<most-recent-sna
 Once you update the Glue script **Save** and **Run** the job.
 
 After running the Glue job. The Glue Data Catalog will have a new table *registersampledataicebergtable* created in the *icebergregister* database
+
+<img width="700" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/registered_table.PNG">
