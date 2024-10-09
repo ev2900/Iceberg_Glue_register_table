@@ -11,7 +11,7 @@ The use case for ```register_table``` is your Iceberg datafiles and metadata fil
 
 ## Example using AWS Glue and Glue Data Catalog
 
-Launch the CloudFormation stack below to walk through an example. In the example you will creating an Iceberg table in the Glue Data Catalog database ```iceberg``` via. a Glue job. Then you will use another Glue job to regsiter the table you created with a different Glue Data Catalog Database ```icebergregister```
+Launch the CloudFormation stack below to walk through an example. In the example you will creating an Iceberg table in the Glue Data Catalog database ```iceberg``` via. a Glue job. Then you will use another Glue job to register the table you created with a different Glue Data Catalog Database ```icebergregister```
 
 ### Lunch the CloudFormation stack
 
@@ -35,4 +35,14 @@ Open the [Glue Console](https://us-east-1.console.aws.amazon.com/gluestudio/home
 
 <img width="700" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/edit_job_1.png">
 
+In the Glue script we need to edit the query 
 
+```
+CALL glue_catalog.system.register_table(
+  table => 'icebergregister.registersampledataicebergtable',
+  metadata_file => 's3://<bucket-name>/metadata/<most-recent-snapshot-file>.metadata.json'
+```
+
+Specifically you need to replace the ```<bucket-name>``` and ```<most-recent-snapshot-file>``` file name. You want the ```register_table```, ```metadata_file``` to reference the most recent *.metadata.json* file. This *.metadata.json* files was created when you ran the *0_create_iceberg_table.py* job to create the initial Iceberg table.
+
+Once you update the Glue script **Save** and **Run** the job.
