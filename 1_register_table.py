@@ -22,8 +22,8 @@ spark = SparkSession.builder \
 
 query = f"""
 CALL glue_catalog.system.register_table(
-  table => 'b.b',
-  metadata_file => 's3://b/metadata/Snapshot A.metadata.json'
+  table => 'icebergregister.registersampledataicebergtable',
+  metadata_file => 's3://<bucket-name>/metadata/<most-recent-snapshot-file>.metadata.json'
 """
 
 spark.sql(query)
