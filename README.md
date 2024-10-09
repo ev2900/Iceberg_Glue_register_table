@@ -19,6 +19,9 @@ Click the button below to launch a CloudFormation stack. The stack will deploy e
 
 [![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=iceberg&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/glue_iceberg_register_table.yaml)
 
+> [!NOTE]
+> The Glue jobs this cloudformation stack deploys uses Iceberg version 1.6.1
+
 ### Run the Glue job to Create Iceberg table
 
 Open the [Glue Console](https://us-east-1.console.aws.amazon.com/gluestudio/home). Select the ETL jobs section and click on run the *0 Create Iceberg Table* and then *Run job*
