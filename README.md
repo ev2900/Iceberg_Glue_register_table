@@ -29,12 +29,9 @@ This will create a table in Glue Data Catalog named *iceberg*
 
 <img width="800" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/glue_table_1.PNG">
 
-We can now run Glue job *1 Register Table* to register the *iceberg* with a new Glue data catalog database *icebergregister*. We cam also rename the table from *sampledataicebergtable* to *registersampledataicebergtable* in process.
+## Update and run the Glue job to register the Iceberg table
 
-Look at the code in the *1 Register Table* to better understand how it works
-
-```
+Open the [Glue Console](https://us-east-1.console.aws.amazon.com/gluestudio/home). Select the ETL jobs section and click on edit
 
 
-```
 
