@@ -21,4 +21,7 @@ Click the button below to launch a CloudFormation stack. The stack will deploy e
 
 ### Run the Glue job to Create Iceberg table
 
+Open the [Glue Console](https://us-east-1.console.aws.amazon.com/gluestudio/home). Select the ETL jobs section and click on run the *0 Create Iceberg Table*
+
+
 
