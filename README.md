@@ -27,5 +27,5 @@ Open the [Glue Console](https://us-east-1.console.aws.amazon.com/gluestudio/home
 
 This will create a table in Glue Data Catalog named *iceberg* 
 
-
+<img width="800" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/glue_table_1.PNG">
 
