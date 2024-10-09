@@ -23,15 +23,16 @@ Click the button below to launch a CloudFormation stack. The stack will deploy e
 
 Open the [Glue Console](https://us-east-1.console.aws.amazon.com/gluestudio/home). Select the ETL jobs section and click on run the *0 Create Iceberg Table* and then *Run job*
 
-<img width="800" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/run_glue_job_1.PNG">
+<img width="700" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/run_glue_job_1.PNG">
 
 This will create a table in Glue Data Catalog named *iceberg* 
 
-<img width="800" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/glue_table_1.PNG">
+<img width="700" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/glue_table_1.PNG">
 
 ## Update and run the Glue job to register the Iceberg table
 
 Open the [Glue Console](https://us-east-1.console.aws.amazon.com/gluestudio/home). Select the ETL jobs section and click on edit
 
+<img width="700" alt="quick_setup" src="https://github.com/ev2900/Iceberg_Glue_register_table/blob/main/REAME/edit_job_1.png">
 
 
