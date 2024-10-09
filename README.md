@@ -43,6 +43,8 @@ CALL glue_catalog.system.register_table(
   metadata_file => 's3://<bucket-name>/metadata/<most-recent-snapshot-file>.metadata.json'
 ```
 
-Specifically you need to replace the ```<bucket-name>``` and ```<most-recent-snapshot-file>``` file name. You want the ```register_table```, ```metadata_file``` to reference the most recent *.metadata.json* file. This *.metadata.json* files was created when you ran the *0_create_iceberg_table.py* job to create the initial Iceberg table.
+Specifically you need to replace the ```<bucket-name>``` and ```<most-recent-snapshot-file>``` file name. You want the ```register_table```, ```metadata_file``` to reference the most recent *.metadata.json* file. This *.metadata.json* files was created when you ran the *0_create_iceberg_table.py* job to create the initial Iceberg table. You can find the name of the S3 bucket and the name of the most recent snapshot file by navigating through the [S3 console](https://us-east-1.console.aws.amazon.com/s3/home)
 
 Once you update the Glue script **Save** and **Run** the job.
+
+After running the Glue job 
