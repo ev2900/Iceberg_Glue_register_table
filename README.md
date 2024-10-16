@@ -15,7 +15,7 @@ The use case for ```register_table``` is your Iceberg datafiles and metadata fil
 
 Launch the CloudFormation stack below to walk through an example. In the example you will creating an Iceberg table in the Glue Data Catalog database ```iceberg``` via. a Glue job. Then you will use another Glue job to register the table you created with a different Glue Data Catalog Database ```icebergregister```
 
-### Lunch the CloudFormation stack
+### Launch the CloudFormation stack
 
 Click the button below to launch a CloudFormation stack. The stack will deploy everything we need including Glue jobs, Glue Data Catalog databases, S3 buckets etc.
 
