@@ -1,12 +1,12 @@
 # Iceberg Glue - register_table
 
-<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-44-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-288-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-027-green">
+<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-51-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-288-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-027-green">
 
 The Apache Iceberg ```register_table``` can be used to register Iceberg metadata file to a new data catalog table. This functionality is especially useful in data catalog migrations.
 
 > [!CAUTION]
 > ```register_table``` will **NOT** change the S3 locations, manifest-list locations etc. in any of the Iceberg metadata files. It will not change any of the S3 file paths in the metadata.json files or any of the avro files in the metadata directoy of an Iceberg table.
-> 
+>
 > If you want to change the S3 locations in the metadata.json and avro metadata files before running ```register_table``` you can consider using the script in the [Iceberg_update_metadata_script](https://github.com/ev2900/Iceberg_update_metadata_script/tree/main) repository to update these.
 
 The use case for ```register_table``` is your Iceberg datafiles and metadata files are **staying the same S3 location** but you want to register them as a new data catalog table.
