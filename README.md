@@ -1,6 +1,6 @@
 # Iceberg Glue - register_table
 
-<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-106-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-1364-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-468-green">
+<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-106-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-1383-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-468-green">
 
 The Apache Iceberg ```register_table``` can be used to register Iceberg metadata file to a new data catalog table. This functionality is especially useful in data catalog migrations.
 
