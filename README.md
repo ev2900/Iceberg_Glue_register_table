@@ -20,7 +20,7 @@ Launch the CloudFormation stack below to walk through an example. In the example
 Click the button below to launch a CloudFormation stack. The stack will deploy everything we need including Glue jobs, Glue Data Catalog databases, S3 buckets etc.
 
 > [!NOTE]
-> The Glue jobs this cloudformation stack deploys uses Iceberg version 1.6.1
+> The Glue jobs this cloudformation stack deploys uses Iceberg version 1.10.0
 
 [![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=iceberg&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/glue_iceberg_register_table.yaml)
 
