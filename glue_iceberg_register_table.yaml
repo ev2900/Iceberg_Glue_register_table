@@ -85,11 +85,18 @@ Resources:
                 # Glue Job Script
                 copy_source = {
                   'Bucket': 'sharkech-public',
-                  'Key': 'misc-public/sample_job.py'
+                  'Key': 'misc-public/0_create_iceberg_table.py'
                 }
   
-                s3.copy_object(CopySource = copy_source, Bucket = os.environ['S3_BUCKET_NAME'], Key = 'scripts/sample_job.py')
+                s3.copy_object(CopySource = copy_source, Bucket = os.environ['S3_BUCKET_NAME'], Key = 'scripts/0_create_iceberg_table.py')
 
+                copy_source = {
+                  'Bucket': 'sharkech-public',
+                  'Key': 'misc-public/1_register_table.py'
+                }
+  
+                s3.copy_object(CopySource = copy_source, Bucket = os.environ['S3_BUCKET_NAME'], Key = 'scripts/1_register_table.py')
+  
                 # Return success status to cloudformation 
                 responseData = {'Status': 'SUCCESS', 'StackId': event['StackId'], 'RequestId': event['RequestId'], 'LogicalResourceId': event['LogicalResourceId'], 'PhysicalResourceId': ''}
                 cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData)
