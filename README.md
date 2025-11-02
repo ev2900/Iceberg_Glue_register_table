@@ -7,9 +7,11 @@ The Apache Iceberg ```register_table``` can be used to register Iceberg metadata
 > [!CAUTION]
 > ```register_table``` will **NOT** change the S3 absolute paths in the Iceberg metadata files.
 >
-> If you want to change the S3 absolute paths bc. you are migrating the table storage (not just the catalog registration) you first need to use the [rewrite_table_path](https://iceberg.apache.org/docs/1.9.0/spark-procedures/#rewrite_table_path) procedure
+> If you want to change the S3 absolute paths bc. you are migrating the table storage (not just the catalog) you need to first use the ```rewrite_table_path``` procedure to update the S3 absolute paths in the metadata files. The documentation for this procedure is [HERE](https://iceberg.apache.org/docs/1.9.0/spark-procedures/#rewrite_table_path).
 >
-> Then you can use the ```register_table``` to register the updated metadata to a new data catalog entry.
+> After you run ```rewrite_table_path``` you can use ```register_table``` referencing the updated metadata.
+>
+> This is only applicable if you are moving the Iceberg table to a different S3 bucket or prefix. If you are leaving the S3 location the same and just migrating it to a new data catalog entry you skip the  ```rewrite_table_path``` procedure and go straight to ```register_table```
 
 The use case for ```register_table``` is your Iceberg datafiles and metadata files are **staying the same S3 location** but you want to register them as a new data catalog table.
 
