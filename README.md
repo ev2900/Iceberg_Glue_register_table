@@ -5,9 +5,11 @@
 The Apache Iceberg ```register_table``` can be used to register Iceberg metadata file to a new data catalog table. This functionality is especially useful in data catalog migrations.
 
 > [!CAUTION]
-> ```register_table``` will **NOT** change the S3 locations, manifest-list locations etc. in any of the Iceberg metadata files. It will not change any of the S3 file paths in the metadata.json files or any of the avro files in the metadata directoy of an Iceberg table.
+> ```register_table``` will **NOT** change the S3 absolute paths in the Iceberg metadata files.
 >
-> If you want to change the S3 locations in the metadata.json and avro metadata files before running ```register_table``` you can consider using the script in the [Iceberg_update_metadata_script](https://github.com/ev2900/Iceberg_update_metadata_script/tree/main) repository to update these.
+> If you want to change the S3 absolute paths bc. you are migrating the table storage (not just the catalog registration) you first need to use the [rewrite_table_path](https://iceberg.apache.org/docs/1.9.0/spark-procedures/#rewrite_table_path) procedure
+>
+> Then you can use the ```register_table``` to register the updated metadata to a new data catalog entry.
 
 The use case for ```register_table``` is your Iceberg datafiles and metadata files are **staying the same S3 location** but you want to register them as a new data catalog table.
 
