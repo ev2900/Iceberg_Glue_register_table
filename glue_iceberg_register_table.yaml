@@ -9,7 +9,7 @@ Resources:
   #
   # Lambda Function IAM Role
   # 
-  LambdaExecutionRole:
+  LambdaDownloadJarExecutionRole:
     Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
@@ -37,7 +37,7 @@ Resources:
     Properties:
       FunctionName: 'Download-Iceberg-Jar-and-Glue-Script'
       Handler: index.lambda_handler
-      Role: !GetAtt LambdaExecutionRole.Arn
+      Role: !GetAtt LambdaDownloadJarExecutionRole.Arn
       Runtime: python3.8
       Code:
         ZipFile: |
