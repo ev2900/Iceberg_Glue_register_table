@@ -26,6 +26,9 @@ Click the button below to launch a CloudFormation stack. The stack will deploy e
 > [!NOTE]
 > The Glue jobs this cloudformation stack deploys uses Iceberg version 1.10.0
 
+> [!WARNING]
+> The CloudFormation stack creates IAM role(s) that have ADMIN permissions. This is not appropriate for production deployments. Scope these roles down before using this CloudFormation in production.
+
 [![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=iceberg-register-table&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/glue_iceberg_register_table.yaml)
 
 ### Run the Glue job to Create Iceberg table
