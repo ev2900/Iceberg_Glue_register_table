@@ -155,7 +155,7 @@ Resources:
           S3_BUCKET_NAME: !Ref S3
       
   #
-  # Customer resource to execute the load CSV lambda function
+  # Customer resource to execute the Download JARs lambda function
   #
   DownloadJARsLambdaFunctionCustomResource:
     Type: AWS::CloudFormation::CustomResource
